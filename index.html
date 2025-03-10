@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing page</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .hero_section{
+            display: flex;
+           gap: 5px;
+           flex-direction: column;
+           height: 100vh;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 60px;
+        }
+        .hero{
+            padding: 10px 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            height: 100%;
+            justify-content: center;
+        }
+        .hero p{
+            width: 50%;
+        }
+        .hero button{
+            padding: 10px 15px;
+        }
+        ul{
+            display: flex;
+            gap: 10px ;
+            list-style-type: none;
+        }
+        .features{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;;
+            padding-bottom: 50px;
+            gap: 10px;
+            height: 55vh;
+        }
+        .services{
+            display: grid;
+            grid-template-columns: repeat(3,minmax(46px, 1fr));
+            gap: 20px;
+            padding: 10px 60px;
+        }
+        .card{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.247) ;
+            height: 250px;
+            border-radius: 10px;
+        }
+        footer{
+            display: flex;
+            height: 40vh;
+            flex-direction: column;
+        }
+        .footer{
+            display: grid;
+            gap: 30px;
+            padding: 40px 60px;
+             grid-template-columns: repeat(3,minmax(46px, 1fr));
+             width: 100%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+        input{
+            padding: 10px 10px;
+        }
+        textarea{
+            resize: none;
+            height: 30px;
+        }
+        .formInput{
+            display: flex;
+            flex-direction: column;
+           justify-content: center;
+            gap: 10px;
+        }
+        .btns button{
+            padding: 10px 20px;
+        }
+        .copyright{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.452);
+        }
+        .socials{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        @media (max-width: 1200px) {
+        .navbar, .hero, .services, .footer {
+            padding: 10px 30px;
+        }
+        .hero p {
+            width: 70%;
+        }
+    }
+    @media (max-width: 768px) {
+        .navbar, .hero, .services, .footer {
+            padding: 10px 20px;
+        }
+        .hero p {
+            width: 90%;
+        }
+        .services {
+            height: auto;
+            grid-template-columns: repeat(2, minmax(46px, 1fr));
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+        }
+        .features{
+            height: auto;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            grid-template-columns: repeat(2, minmax(46px, 1fr));
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <section class="hero_section">
+        <div class="navbar">
+            <div class="logo">logo</div>
+            <div class="nav">
+                <ul>
+                    <li>Home</i>
+                    <li>Product</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+        <div class="hero">
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur soluta neque recusandae quaerat sapiente culpa accusamus hic! Nobis, molestias nam, voluptatibus quidem consectetur voluptates nostrum modi molestiae possimus qui ipsa!</p>
+             <div class="ctaBtns">
+                 <button>Get Started</button>
+             </div>
+         </div>
+    </section>
+    <section class="features">
+        <div class="servicesTitle">\
+
+            <h2>Services</h2>
+        </div>
+        <div class="services">
+            <div class="card">
+                <h3>Feature one</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit adipisci velit.</p>
+            </div>
+            <div class="card">
+                <h3>Feature three</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit adipisci velit.</p>
+            </div>
+            <div class="card">
+                <h3>Feature three</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit adipisci velit.</p>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="logo">Logo</div>
+            <div class="socials">
+                <h2>Socials</h2>
+                <div class="link">
+                    Facebook
+                </div>
+                <div class="link">
+                    Twitter
+                </div>
+                <div class="link">
+                    instagram
+                </div>
+                <div class="link">
+                    talk2us@gmail.com
+                </div>
+            </div>
+            <div class="contact">
+                <div class="formCard">
+                    <h2 style="padding: 5px 0;">Contact us</h2>
+                    <form action="#">
+                        <div class="formInput">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="formInput">
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="formInput">
+                            <label for="message">Your Message</label>
+                            <textarea name="message" id="message"></textarea>
+                        </div>
+                        <div class="btns">
+                            <button> Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; mywebpage 2024 alright recived
+        </div>
+    </footer>
+</body>
+</html>
